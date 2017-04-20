@@ -9,6 +9,29 @@ Page({
     day: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
     classTable: []
   },
+
+  download: function(){
+  wx.request({
+        url: 'http://localhost:3000/class/download',
+        
+        method: 'POST', 
+        success: (res) => {
+          // this.setData({
+          //   tmpl: {
+          //     load: true
+          //   },
+          //   classTable: res.data
+          // })
+        },
+        fail: (res) => {
+          // this.setData({
+          //   tmpl: {
+          //     load: false
+          //   },
+          // })
+        }
+      })
+  }, 
   //事件处理函数
   onLoad: function () {
     if (!wx.getStorageSync('LoginSessionKey')) {
@@ -38,5 +61,8 @@ Page({
         }
       })
     }
-  }
+
+  },
+
 })
+

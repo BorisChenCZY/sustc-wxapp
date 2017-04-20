@@ -5,6 +5,7 @@
 
 <!--load successfully-->
 <view wx:if="{{ tmpl.load == true }}" class="classtable">
+  <button id = 'download' bindtap = 'download' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'> Download </button>
   <view class="day-row">
     <view wx:for="{{ day }}" wx:for-item="name"  class="day-cell">
       <text>{{ name }}</text>
@@ -12,12 +13,16 @@
   </view>
   <view wx:for="{{ classTable }}" wx:for-item="classes" class="class-row">
     <view wx:for="{{ classes }}" wx:for-item="class" class="class-cell">
-      <view class="info subject">
+      <!--<view class="info subject">
         <text>{{ class.subject }}</text>
       </view>
-      <view class="info">
+      <view class="info room">
         <text>{{ class.room }}</text>
       </view>
+      <view class='info week'>
+        <text>{{ class.week }}</text>
+      </view>-->
+        {{class.text}}
     </view>
   </view>
 </view>

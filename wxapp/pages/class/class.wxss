@@ -27,3 +27,9 @@
 .subject {
   margin-bottom: 15rpx;
 }
+
+#download{
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+}

@@ -3,20 +3,61 @@
   font-size: 30rpx;
   color: #ff0000;
 }
-input {
-    width: 500rpx;
-    padding: 10px;
-    border: 1px solid #eee;
-    margin: 20rpx;
-    border-radius: 5px;
-    font-size: 32rpx;
+
+input, button, .copy{
+    position: relative;
+    top: -450rpx;
 }
-button {
+
+button#button {
+    margin:15px 0 15px 0;
     width: 540rpx;
+    /*border: 0; */
+    opacity: 0;
 }
-.state {
-    margin-top: 30rpx;
-    line-height: 40rpx;
-    width: 500rpx;
+
+.mdl-textfield__input {
+    opacity: 0;
+    padding-left: 0;
+}
+
+view#state{
+    position: absolute;
+    bottom: 250px;
+    padding: 30rpx;
+    /*text-align: center;*/
+    line-height: 50rpx;
+    width: 540rpx;
+    height: auto;
     font-size: 30rpx;
+    color: grey;
+    opacity: 0;
+}
+
+.mdl-card{
+
+    height: auto !important;
+    min-height: 0;
+}
+
+text {
+    margin: 4rpx;
+}
+
+#copy{
+    position: absolute;
+    bottom: 500rpx;
+    font-size: 20rpx;
+    color:grey;
+    opacity: 0;
+}
+
+hr {
+    margin: 13rpx;
+    margin-left: 0;
+    padding: 0;
+    background-color: hotpink;
+    width: 0%;
+    position: relative;
+    left: 0%;
 }

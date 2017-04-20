@@ -8,18 +8,24 @@
   <text class="warn">{{ warn }}</text>
   <form bindsubmit="login">
     <view class="section">
-      <input type="text" name="username" placeholder="Student ID" />
+      <input animation="{{animation1}}" bindtap="click1" type="text" class="mdl-textfield__input" name="username" placeholder="Student ID" />
+      <hr animation='{{line1}}' />
     </view>
     <view class="section">
-      <input password="true" type="text" name="password" placeholder="Password" />
+      <input animation="{{animation2}}" bindtap="click2" password="true" class="mdl-textfield__input" type="text" name="password" placeholder="Password" />
+      <hr animation='{{line2}}' />
     </view>
     <view class="section">
-      <button plain="true" form-type="submit">Sign in</button>
+      <button animation="{{animation3}}" id='button' class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" form-type="submit">Sign in</button>
     </view>
   </form>
-  <view class="state">
-    <text>注: 使用cas账号密码登录。本程序使用爬虫抓取信息，不接入数据库，作者承诺不会储存任何个人信息</text>
+  <view id='state' class="state demo-card-wide mdl-card mdl-shadow--2dp {{select == 0 ? '':'motion'}}" animation="{{animation4}}">
+    <text>请使用cas账号密码登录。</text>
+    <text>本程序使用爬虫抓取信息，不接入数据库。作者承诺不会储存任何个人信息。</text>
+    
   </view>
+
+  <text id='copy' animation="{{animation5}}" >© Qia & Boris</text>
 </view>
 
 <!--load failed-->
